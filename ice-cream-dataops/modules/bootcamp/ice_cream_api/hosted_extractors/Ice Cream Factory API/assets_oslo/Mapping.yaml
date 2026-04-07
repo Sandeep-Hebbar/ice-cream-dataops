@@ -1,8 +1,8 @@
-externalId: ICAPI Assets
+externalId: ICAPI Assets Oslo
 mapping:
    expression: 'input.map(row => {
       "type": "raw_row",
-      "table": "assets",
+      "table": "assets_oslo",
       "database": "ice-cream-factory-db",
       "key": row.external_id,
       "columns": row

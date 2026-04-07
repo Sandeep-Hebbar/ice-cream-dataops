@@ -1,0 +1,11 @@
+externalId: ICAPI Assets Oslo
+sourceId: Ice Cream Factory API
+destinationId: ICAPI Assets
+format:
+  type: custom
+  encoding: utf8
+  mappingId: ICAPI Assets Oslo
+config:
+  interval: 1d
+  path: /site/Oslo/csv
+  method: get
