@@ -4,7 +4,7 @@ capabilities:
   - functionsAcl:
       actions: [READ, WRITE]
       scope:
-        datasetIdScope:
+        dataSetIdScope:
           ids: [{{ uc_oee_ds_external_id }}]
   - groupsAcl:
       actions: [LIST, READ]
