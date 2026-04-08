@@ -8,7 +8,7 @@ workflowDefinition:
       transformation:
         externalId: create_asset_hierarchy
     retries: 3
-    timeout: 3600
+    timeout: 600
     onFailure: abortWorkflow
 
   - externalId: contextualize_ts_assets_task
@@ -17,7 +17,7 @@ workflowDefinition:
       transformation:
         externalId: contextualize_ts_assets
     retries: 3
-    timeout: 3600
+    timeout: 600
     onFailure: abortWorkflow
     dependsOn:
       - externalId: create_asset_hierarchy_task
@@ -29,7 +29,7 @@ workflowDefinition:
         externalId: icapi_datapoints_extractor
         data: { "hours": 1 }
     retries: 3
-    timeout: 3600
+    timeout: 600
     onFailure: abortWorkflow
     dependsOn:
       - externalId: contextualize_ts_assets_task
@@ -41,7 +41,7 @@ workflowDefinition:
         externalId: oee_timeseries
         data: { "lookback_minutes": 60 }
     retries: 3
-    timeout: 3600
+    timeout: 600
     onFailure: abortWorkflow
     dependsOn:
       - externalId: icapi_datapoints_extractor_task
